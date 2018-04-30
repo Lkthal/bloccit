@@ -10,8 +10,5 @@ class WelcomeController < ApplicationController
 
   def faq
   end
-<<<<<<< HEAD
-  
-=======
->>>>>>> 02-Rails_testing
+
 end

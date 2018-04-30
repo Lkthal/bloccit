@@ -20,7 +20,7 @@ source 'https://rubygems.org'
    # Use sqlite3 as the development database for Active Record
    gem 'sqlite3'
  end
- 
+
  # Use Puma as the app server
  gem 'puma', '~> 3.0'
  # Use SCSS for stylesheets
@@ -37,14 +37,9 @@ source 'https://rubygems.org'
 
  gem 'thor', '0.20.0'
 
-<<<<<<< HEAD
- group :development, test do
-   gem 'rspec-rails', '~> 3.0'
-   gem 'rails-controller-testing'
-=======
  group :development, :test do
->>>>>>> 02-Rails_testing
    gem 'listen', '~> 3.0.5'
    gem 'rspec-rails', '~> 3.0'
    gem 'rails-controller-testing'
+   
  end
