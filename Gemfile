@@ -38,10 +38,10 @@ source 'https://rubygems.org'
  gem 'thor', '0.20.0'
 
  gem 'bootstrap-sass'
- 
+
  group :development, :test do
    gem 'listen', '~> 3.0.5'
    gem 'rspec-rails', '~> 3.0'
    gem 'rails-controller-testing'
-
+   gem 'pry-rails'
  end
