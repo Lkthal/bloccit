@@ -25,6 +25,14 @@ posts = Post.all
     body: RandomData.random_paragraph
   )
 end
+20.times do
+	Advertisement.create!(
+		title: RandomData.random_sentence,
+		copy: RandomData.random_paragraph,
+		price: rand(1..100)
+	)
+end
+
 Post.find_or_create_by!(title: "A unique title", body: "A unique body")
 puts "#{Post.count}"
 
@@ -34,4 +42,5 @@ end
 
 puts "Seed finished"
 puts "#{Post.count} post created"
+puts "#{Advertisement.count} advertisements created"
 puts "#{Comment.count} comments created"
