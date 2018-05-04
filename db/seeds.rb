@@ -36,9 +36,8 @@ end
 Post.find_or_create_by!(title: "A unique title", body: "A unique body")
 puts "#{Post.count}"
 
-Post.find_or_create_by!(title: "A unique title") do |comment|
-  Comment.body = "the original title"
-end
+Comment.find_or_create_by(body: "unique body", post: post)
+
 
 puts "Seed finished"
 puts "#{Post.count} post created"
