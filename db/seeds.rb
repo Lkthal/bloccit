@@ -32,6 +32,17 @@ end
 	)
 end
 
+20.times do
+	Sponsored_Post.create!(
+    topic: topics.sample,
+		title: RandomData.random_sentence,
+		body: RandomData.random_paragraph,
+		price: rand(1..100)
+	)
+end
+sponsored_posts = Sponsored_Post.all
+
+
 50.times do
 	Question.create!(
 		title: RandomData.random_sentence,
@@ -49,6 +60,7 @@ Comment.find_or_create_by(body: "unique body", post: post)
 puts "Seed finished"
 puts "#{Topic.count} topic created"
 puts "#{Post.count} post created"
+puts "#{Sponsored_Post.count} post created"
 puts "#{Question.count} question created"
 puts "#{Advertisement.count} advertisements created"
 puts "#{Comment.count} comments created"
