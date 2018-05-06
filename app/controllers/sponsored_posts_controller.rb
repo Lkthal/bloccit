@@ -15,7 +15,7 @@
       @sponsored_post.price = params[:sponsored_post][:price]
       @topic = Topic.find(params[:topic_id])
       @sponsored_post.topic = @topic
-      
+
       if @sponsored_post.save
         flash[:notice] = "Sponsored post was saved."
         redirect_to [@topic, @sponsored_post]
