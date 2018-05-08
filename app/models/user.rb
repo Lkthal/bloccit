@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+
   before_save { self.email = email.downcase if email.present? }
   before_save { self.name = name.split.map!{|format_name| format_name.capitalize}.join(" ") if name.present? }
 
@@ -13,4 +15,5 @@ class User < ApplicationRecord
       length: { minimum: 3, maximum: 254 }
 
   has_secure_password
+  has_many :posts, dependent: :destroy
 end
