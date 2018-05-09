@@ -78,6 +78,12 @@ member = User.create!(
   password: 'helloworld'
 )
 
+moderator = User.create!(
+  name:     'moderator User',
+  email:    'moderator@example.com',
+  password: 'helloworld'
+)
+
 puts "Seed finished"
 puts "#{User.count} user created"
 puts "#{Topic.count} topic created"
