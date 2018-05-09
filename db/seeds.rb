@@ -63,18 +63,20 @@ sponsored_posts = SponsoredPost.all
 	)
 end
 
-user= User.first
-user.update_attributes!(
-  email: 'thal@bloc.io',
-  password: 'helloworld'
+# Create an admin user
+admin = User.create!(
+  name:     'Admin User',
+  email:    'admin@example.com',
+  password: 'helloworld',
+  role:     'admin'
 )
 
-topic = Topic.find_or_create_by!(name: "somthing", description: "unique description")
-post = Post.find_or_create_by!( title: "A unique title", body: "A unique body that is too short", topic: topic, user: user)
-#puts "#{Post.count}"
-
-Comment.find_or_create_by(body: "unique body", post: post)
-
+# Create a member
+member = User.create!(
+  name:     'Member User',
+  email:    'member@example.com',
+  password: 'helloworld'
+)
 
 puts "Seed finished"
 puts "#{User.count} user created"
