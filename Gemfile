@@ -40,11 +40,12 @@ source 'https://rubygems.org'
  gem 'bootstrap-sass'
 
  gem 'bcrypt'
- 
+
  group :development, :test do
    gem 'listen', '~> 3.0.5'
    gem 'rspec-rails', '~> 3.0'
    gem 'rails-controller-testing'
    gem 'pry-rails'
    gem 'shoulda'
+   gem 'figaro', '1.0'
  end
