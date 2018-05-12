@@ -17,6 +17,7 @@ class FavoriteMailer < ApplicationMailer
    end
 
   def new_post(post)
+
     headers["Message-ID"] = "<comments/#{comment.id}@your-app-name.example>"
     headers["In-Reply_To"] = "<post/#{post.id}@your-app-name.example>"
     headers["References"] = "<post/#{post.id}@your-app-name.example>"
