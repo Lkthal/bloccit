@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   pw = RandomData.random_sentence
 
   factory :user do
@@ -9,4 +9,4 @@ FactoryGirl.define do
     password_confirmation pw
     role :member
   end
-end 
+end
