@@ -121,4 +121,22 @@ RSpec.describe User, type: :model do
        expect(known_user.avatar_url(48)).to eq(expected_gravatar)
      end
    end
+
+   describe "#all_favorites" do
+    before do
+      topic = create(:topic)
+      @post = create(:post)
+    end
+
+    it "returns nil if the user has not favorited any posts" do
+      expect(user.all_favorites.first).to be_nil
+    end
+
+    it "returns all favorites if they exist" do
+      favorite = user.favorites.where(post: @post).create
+
+      expect(user.all_favorites.first).to eq(favorite)
+    end
+  end
+  
 end
